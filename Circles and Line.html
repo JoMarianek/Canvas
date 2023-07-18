@@ -1,0 +1,42 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="canvas" width="1024" height="768"></canvas>
+    <script>
+        const canvas = document.getElementById('canvas')
+        const context = canvas.getContext('2d')
+
+        
+        function line (startx, starty, endx, endy) {
+            context.beginPath();
+
+            context.moveTo(startx, starty)
+            context.lineTo(endx, endy);
+
+            context.closePath();
+            context.stroke();
+        }
+
+        function circle (startx, starty, radius) {
+            context.beginPath();
+            context.arc(startx, starty, radius, 0, 2 * Math.PI)
+            
+            context.stroke();
+        }
+
+        
+        function segment (startx, starty, endx, endy, radius) {
+            line (startx, starty, endx, endy)
+            circle (startx, starty, radius)
+            circle (endx, endy, radius)
+        }
+
+        segment (50, 50, 100, 100, 5)
+    </script>
+</body>
+</html>
