@@ -36,7 +36,17 @@
             circle (endx, endy, radius)
         }
 
-        segment (50, 50, 100, 100, 5)
+      //  segment (50, 50, 100, 100, 5)
+
+        function segmentMiddle (startx, starty, endx, endy, radius) {
+            line (startx, starty, endx, endy)
+          
+            circle ((startx+endx)/2, (endy+starty)/2, radius)
+
+        }
+        segmentMiddle (50, 50, 100, 100, 5)
+
+        segmentMiddle (75, 600, 400, 300, 5)
     </script>
 </body>
 </html>
