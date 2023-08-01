@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="canvas" width="1024" height="768"></canvas>
+    <script>
+        const canvas = document.getElementById('canvas')
+        const context = canvas.getContext('2d')
+        context.translate(0.5, 0.5)
+
+        
+        function line (startx, starty, endx, endy) {
+            context.beginPath();
+
+            context.moveTo(startx, starty)
+            context.lineTo(endx, endy);
+
+            context.closePath();
+            context.stroke();
+        }
+
+        // for (let i = 0; i < 4; i = i + 1) {
+        //     const step = i*50
+        //     line (0, step, 150, step) 
+        //     line (step, 0, step, 150)
+        //     console.log(i)
+        // }
+
+      
+        
+
+        function grid (width, height, size) {
+            for (let i = 0; i <= height; i = i + 1) {
+                const step = i*size
+                line (0, step, width*size, step) 
+                
+            }
+
+            for (let i = 0; i <= width; i = i +1) {
+                const step = i*size
+                line (step, 0, step, height*size)   
+            }
+
+
+            context.textAlign = 'center'
+            context.textBaseline = 'middle'
+            context.font = '16px sans-serif'
+            
+
+
+            for ( let j = 0; j < height; j = j +1){
+            
+                
+                for (let i = 0; i < width; i = i +1 ){
+                    const step = i*size
+                    //var red = Math.floor(Math.random()*256)
+                    //var green = Math.floor(Math.random()*256)
+                    //var blue = Math.floor(Math.random()*256)
+                    var randomNumber = Math.floor(Math.random()*10)
+                    context.fillStyle = `rgb(0, 0, 255)`
+                    if (randomNumber === 3) {
+                        context.fillStyle = `rgb(85,107,47)`
+                    }
+                    
+                    context.fillText(randomNumber, step+(size/2), j*size+size/2)
+                    
+                }
+
+            }
+        }
+        grid (18, 16, 42)
+
+    
+        
+    </script>
+</body>
+</html>
