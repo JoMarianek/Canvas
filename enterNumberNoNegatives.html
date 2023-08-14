@@ -1,0 +1,35 @@
+<DOCTYPE! html>
+    <html lang="eng">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Do you want to enter a number?</title>
+
+</head>
+
+<body>
+    <script>
+        var input1 = prompt("Do you want to enter a number? Please answer with yes or no.")
+        function testNum(a) {
+            if (a === "yes") { 
+                var input2 = prompt("Please enter a number");
+            
+            while (input2<0) {
+                prompt("Please enter another number.")
+            
+            }
+
+            return `You have entered ${input2}`
+            }
+            else {
+               return `sad` 
+            }
+           
+        }
+            
+            console.log(testNum(input1))   
+
+    </script>
+</body>
+
+    </html
