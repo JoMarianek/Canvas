@@ -2,21 +2,22 @@
 <html lang="eng">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Watchhface</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watchhface</title>
 
 </head>
 
 <body>
     <script>
-var input1 = prompt("Please enter a time in the format HH for the hours")
-var input2 = prompt("Please enter a time in the format MM for the minutes")
+        var input1 = prompt("Please enter a time in the format HH for the hours")
+        var input2 = prompt("Please enter a time in the format MM for the minutes")
 
-var hours = input1*30
-var minutes = input2*6
+        var hours = input1 * 30
+        var minutes = input2 * 6
+        var output = Math.abs(minutes - hours)
 
-console.log(minutes-hours)
+        console.log(output)
 
     </script>
 
