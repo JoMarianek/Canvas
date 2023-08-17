@@ -1,30 +1,26 @@
 <DOCTYPE! html>
     <html lang="eng">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Do you want to enter a number?</title>
 
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Do you want to enter a number?</title>
+    </head>
 
-<body>
-    <script>
-        var input1 = prompt("Do you want to enter a number? Please answer with yes or no.")
-        function testNum(a) {
-            if (a === "yes") { 
+    <body>
+        <script>
+            var input1 = prompt("Do you want to enter a number? Please answer with yes or no.")
+            var result
+            if (input1 === "yes") {
                 var input2 = prompt("Please enter a number");
-                return `You have entered ${input2}`
+                result = `You have entered ${input2}`
             }
             else {
-               return `sad` 
+                result = `sad`
             }
-           
-            }
-            // i feel like I havent completely understoof the if else funcion yet, 
-            //I need the return right? i dont fully understand when I need the return and when not
-            console.log(testNum(input1))   
+            console.log(result)
 
-    </script>
-</body>
+        </script>
+    </body>
 
     </html>
