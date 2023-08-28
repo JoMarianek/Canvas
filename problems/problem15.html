@@ -1,0 +1,33 @@
+<DOCTYPE! html>
+    <html lang="eng">
+        <head>
+            <meta charset="UTF-8"> 
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>problem15 FizzBuzz</title>
+        </head>
+
+        <body>
+            <script>
+                function fizzBuzz(x) {
+                //var fb = '' would it work if in the if else conditions i would replace i with fb? calling the function with a "starter value" of 1 feels wrong :P
+                    for (let i=1; i < 101; i++) {
+                        if (i%3 === 0 && i%5 === 0) {
+                            console.log('FizzBuzz') 
+                        } else if (i%3 === 0) {
+                            console.log('Fizz') 
+                        } else if (i%5 === 0) {
+                            console.log('Buzz') 
+                         } else {
+                            console.log(i)
+                        }
+                    
+                    }
+                
+                }
+                fizzBuzz(1)
+                
+            </script>
+        </body>
+
+
+    </html>
