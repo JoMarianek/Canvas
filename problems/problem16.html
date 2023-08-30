@@ -8,15 +8,14 @@
     <body>
         <script>
             var input = prompt('Please enter a year between year 1 and 3000')
-            var twodigits
-            function century(year) {
-                if (input<1 || input>3000) {
-                    return 'The number you have entered was not between 1 and 3000.'
-                } else {
-                    return twodigits = Math.ceil(input/100)+'th century'
-                } 
-            }
-            console.log(century(input))
+            var result
+            if (input<1 || input>3000) {
+                result = 'The number you have entered was not between 1 and 3000.'
+            } else {
+                result =  Math.ceil(input/100)+'th century'
+            } 
+        
+            console.log(result)
 
 
         </script>
