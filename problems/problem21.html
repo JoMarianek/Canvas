@@ -1,0 +1,29 @@
+<DOCTYPE! html>
+
+<html lang="eng">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="vieport" content="width=device-width initial-scale=1.0">
+        <title>problem 21, How many negatives?</title>
+    </head>
+
+    <body>
+        <script>
+            function positiveCount(x, y, z){
+                if (x>0 && y>0 && z>0) {
+                    return 3
+                } else if (x>0 && y>0 || x>0 && z>0 || y>0 && z>0) {
+                    return 2
+                } else if (x>0 || y>0 || z>0) {
+                    return 1
+                } else {
+                    return 0
+                }
+            }
+
+            console.log(positiveCount(-2, 0, -1))
+        </script>
+    </body>
+
+
+</html>
