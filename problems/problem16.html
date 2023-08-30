@@ -1,0 +1,26 @@
+<DOCTYPE! html>
+    <html lang="eng">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width initial-scale=1.0">
+            <title>problem16 Which century?</title>
+        </head>
+    <body>
+        <script>
+            var input = prompt('Please enter a year between year 1 and 3000')
+            var twodigits
+            function century(year) {
+                if (input<1 || input>3000) {
+                    return 'The number you have entered was not between 1 and 3000.'
+                } else {
+                    return twodigits = Math.ceil(input/100)+'th century'
+                } 
+            }
+            console.log(century(input))
+
+
+        </script>
+    </body>
+
+
+    </html>
