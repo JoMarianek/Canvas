@@ -1,0 +1,31 @@
+<DOCTYPE! html>
+    <html lang="eng">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width initial-scale=1.0">
+        <title>problem22 Guessing Game</title>
+    </head>
+
+    <body>
+        <script>
+            var input = prompt('Please guess a number between 1 and 9.')
+            var inputn = parseInt(input)
+            var randomN = Math.ceil(Math.random()*9)
+            function gg(x) {
+                while (inputn != randomN) {
+                    inputn = parseInt(prompt('You guessed wrong. Please enter another number.'))
+
+                }
+                if (inputn === randomN) {
+                    return 'Congrats! You have guessed the number correctly.'
+                    //result = input    I don´t understand why this doesnt work, shouldn´t the input variable trigger the prompt?, is it because i assign the number entered via the prompt to the variable and for that to 
+                    //work it should be the other *9way around of assigning the 
+                }
+            }
+
+            console.log(gg(input))
+        </script>
+    </body>
+
+    </html>
